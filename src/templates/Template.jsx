@@ -1,22 +1,40 @@
 import React from "react"
+import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import Lolly from "../components/Lolly"
 
-const Template = () => {
+export const query = graphql`
+  query MyQuery($lollypath: String!) {
+    fauna {
+      LollyByPath(lollyPath: $lollypath) {
+        sender
+        message
+        reciever
+        top
+        middle
+        bottom
+        lollyPath
+      }
+    }
+  }
+`
+
+const Template = ({data}) => {
+  const {LollyByPath} = data.mylollypath
   return (
     <div>
-      {/* <Lolly
-        top={getLollybyAddress.tColor}
-        middle={getLollybyAddress.mColor}
-        bottom={getLollybyAddress.bColor}
-      /> */}
-      {/* <p>{`/lolly/${getLollybyAddress.address}`}</p> */}
+      <Lolly
+        top={LollyByPath.top}
+        middle={LollyByPath.middle}
+        bottom={LollyByPath.bottom}
+      />
+      <p>{`https://myvlolly.netlify.app/lolly/${LollyByPath.lollyPath}`}</p>
       <div>
-        {/* <h1>to: {getLollybyAddress.reciever}</h1>
-        <p>{getLollybyAddress.message}</p>
-        <h3>From: {getLollybyAddress.sender}</h3> */}
+        <h1>to: {LollyByPath.reciever}</h1>
+        <p>{LollyByPath.message}</p>
+        <h3>From: {LollyByPath.sender}</h3>
         <p>
-           made this virtual lollipop for you. You can{" "}
+          made this virtual lollipop for you. You can{" "}
           <Link to="/createNew"> make your own</Link> to send to a friend who
           deserve some sugary treat which won't rot their teeth...
         </p>

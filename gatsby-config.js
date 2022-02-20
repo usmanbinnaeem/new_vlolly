@@ -28,16 +28,16 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`,
       },
     },
-    // {
-    //   resolve: "gatsby-source-graphql",
-    //   options: {
-    //     // Arbitrary name for the remote schema Query type
-    //     typeName: "SWAPI",
-    //     // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
-    //     fieldName: "mylollypath",
-    //     // Url to query from
-    //     url: "https://swapi-graphql.netlify.app/.netlify/functions/index",
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // Arbitrary name for the remote schema Query type
+        typeName: "LOLLy",
+        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
+        fieldName: "mylollypath",
+        // Url to query from
+        url: "https://myvlolly.netlify.app/.netlify/functions/vlolly",
+      },
+    },
   ],
 }
