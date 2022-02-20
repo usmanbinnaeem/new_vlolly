@@ -1,13 +1,8 @@
 import React, { useRef, useState } from "react"
 import Header from "../components/header"
 import Lolly from "../components/Lolly"
-import { useQuery, useMutation, gql } from "@apollo/client"
-
-const lollyData = gql`
-  {
-    hello
-  }
-`
+import { useMutation, gql } from "@apollo/client"
+import { navigate } from "gatsby"
 
 const CREATE_LOLLY_MUTATION = gql`
   mutation createLolly(
@@ -58,6 +53,7 @@ const CreateNew = () => {
     })
 
     console.log("result from server = ", result)
+    navigate(`/lolly/${result.data.createLolly.lollyPath}`)
   }
   return (
     <>
