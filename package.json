@@ -20,7 +20,6 @@
     "gatsby-source-filesystem": "^4.7.0",
     "gatsby-source-graphql": "^4.7.0",
     "gatsby-transformer-sharp": "^4.7.0",
-    "graphql": "^16.3.0",
     "path": "^0.12.7",
     "prop-types": "^15.8.0",
     "react": "^17.0.1",
@@ -30,9 +29,6 @@
   },
   "devDependencies": {
     "prettier": "^2.5.1"
-  },
-  "resolutions": {
-    "graphql": "^16.3.0"
   },
   "keywords": [
     "gatsby"

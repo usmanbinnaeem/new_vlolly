@@ -5,7 +5,7 @@ import Lolly from "../components/Lolly"
 
 export const query = graphql`
   query MyQuery($lollypath: String!) {
-    fauna {
+    mylollypath {
       LollyByPath(lollyPath: $lollypath) {
         sender
         message

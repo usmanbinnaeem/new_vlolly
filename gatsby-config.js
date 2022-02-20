@@ -6,20 +6,11 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
     {
       resolve: "gatsby-source-graphql",
       options: {
         // Arbitrary name for the remote schema Query type
-        typeName: "LOLLy",
+        typeName: "MYLOLLYPATH",
         // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
         fieldName: "mylollypath",
         // Url to query from
