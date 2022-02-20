@@ -6,7 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@apollo/client": "^3.5.9",
-    "apollo-server-lambda": "^2.25.3",
+    "apollo-server-lambda": "^3.6.3",
     "axios": "^0.26.0",
     "cross-fetch": "^3.1.5",
     "faunadb": "^4.5.2",
@@ -20,7 +20,7 @@
     "gatsby-source-filesystem": "^4.7.0",
     "gatsby-source-graphql": "^4.7.0",
     "gatsby-transformer-sharp": "^4.7.0",
-    "graphql": "^14.7.0",
+    "graphql": "^16.3.0",
     "path": "^0.12.7",
     "prop-types": "^15.8.0",
     "react": "^17.0.1",
